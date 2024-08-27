@@ -1,0 +1,26 @@
+body{
+
+    display: flex;
+    align-items: center;
+    font-family: 'The Billion';
+
+}
+@font-face {
+    font-family: 'The Billion';
+    src: url("/public/fonts/The\ Billion\ Monoline.ttf");
+}
+.imagens-body{
+    width: 500px;
+}
+h2{
+    color: red;
+    font-family: ;
+}
+.body-container{
+    display: flex ;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0.726);
+
+}

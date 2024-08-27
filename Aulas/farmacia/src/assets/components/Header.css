@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Bonello';
+    src: url(/public/fonts/Bonello-Regular.otf);
+}
+.header-container{
+    background-color: #e23e57;
+    display: flex;
+    height: 100%;
+}
+.header-icon{
+    width: 30%;
+    height: 10%;
+    display: flex;
+    align-items:top ;
+    justify-content: top;
+    padding-left: 10px;
+
+}
+.header-label{
+    width: 70%;
+    display: flex;
+    justify-content:center;
+    padding-right: 310px;
+}
+.header-farm-label{
+    font-family: 'Bonello' ;
+    font-size: 80px;
+    color: #ffffff;
+}
+.header-logo{
+    height: 120px;
+}

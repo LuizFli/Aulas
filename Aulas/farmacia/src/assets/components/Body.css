@@ -1,0 +1,89 @@
+.body-container{
+    height: 100%;
+    width: 100%;
+}
+.img-footer{
+    width:100%;
+    height: 35vh;
+    margin-top: 20px;
+    margin-bottom: 0;
+    
+}
+.imgPlaca{
+    margin-top: 5px;
+    height: 360px;
+}
+.camiseta{
+    height: 150px;
+}
+.farmarcia{
+    height: 300px;
+}
+.body-farmarcia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-body-label{
+    width: 60%;
+
+}
+.div-div-body-label{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.body-camiseta{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.div-body-label-venda{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+.body-label-venda{
+    color: #e6e6e6;
+    font-size: 50px;
+}
+.body-sobreNos{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-label-sobreNos{
+    color: #e6e6e6;
+    font-size: 50px;
+}
+.labelNHistoria{
+    color: #e6e6e6;
+    font-size: 50px;
+    
+}
+.div-body-historia{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 20px;
+}
+.div-body-NHistoria{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.div-div-body-NHistoria{
+    width: 60%;
+}
