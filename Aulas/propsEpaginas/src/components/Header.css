@@ -1,0 +1,11 @@
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    background-color: black;
+    color: greenyellow;
+    border-radius: 20px;
+    margin-top: 10px;
+}
