@@ -1,0 +1,51 @@
+.corpoDado{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+.butDado{
+    height: 30%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.719);
+    color: greenyellow;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: inset 0 0 10px 3px greenyellow;
+
+
+}
+.lblDado{
+    height: 30%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: inset 0 0 10px 3px greenyellow;
+    font-size: 100px;
+} 
+.butaoDado{
+    width: 150px;
+    height: 60px;
+    border-radius: 15px;
+    border-color: white;
+    background-color: black;
+    color: greenyellow;
+    font-size: 20px;
+
+}
+.butaoDado:hover{
+    box-shadow: inset 0 0 10px 3px greenyellow;
+    transition: 1.2s;
+    scale: 1.1;
+
+}
