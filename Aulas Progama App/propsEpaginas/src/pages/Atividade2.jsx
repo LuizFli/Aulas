@@ -11,7 +11,7 @@ function Atividade2() {
     let dadoPeso
     let n = 1
     let bol = true
-    const somatorioNotas = 0
+    let somatorioNotas = 0
 
     function atividade2(){
         do {
