@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: top;
+    background-color: red;
     
 }
 .div-input{
@@ -13,4 +14,10 @@
     align-items: top;
     /* color: {cor}; */
 
+}
+.test{
+    background-color: green;
+}
+.testRed{
+    background-color: red;
 }

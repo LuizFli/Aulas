@@ -6,6 +6,7 @@ function Atividade530() {
     const [inputNumero, setInputNumero] = useState()
     const [resultado, setResultado] = useState() 
     const [cor, setColor] = useState()
+    const [stateClasse, setClasse] = useState('div-530-container')
     
     function ler(e){
         // console.log(e)
@@ -15,11 +16,14 @@ function Atividade530() {
                 
                 setResultado('É Pár e Positivo')
                 setColor('green')
+                setClasse('test')
+
                 break;
             case ((e.target.value)%2 == 0 ):
                 
                 setResultado('É Par')
                 setColor('brown')
+                setClasse('testRed')
                 break;
             case (Number(e.target.value)>0):
                 
@@ -46,11 +50,12 @@ function Atividade530() {
                 setColor('brown')
                 break;
         }
-        
+        // setClasse('test')
     }
 
   return (
-    <div className='div-530-container'>
+    // <div className='div-530-container'>
+    <div className={stateClasse}>
         <div>
 
       <label >Digite Um Numero :</label>
