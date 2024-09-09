@@ -19,7 +19,7 @@ function Atividade2() {
 
                 dadoPeso = Number(prompt('Digite O peso da '+n+'° Nota ( exemplo 0.1, 0.2...etc)'))
                 dadoNota = Number(prompt('Digite Quanto Foi a '+n+'° Nota'))
-                if(dadoNota >=0 && dadoNota<=10){
+                if(dadoNota >=0 && dadoNota<=10 && dadoPeso >=0 && dadoPeso <= 1){
                     
                     vetorNotas.push(dadoNota)
                     vetorPesos.push(dadoPeso)

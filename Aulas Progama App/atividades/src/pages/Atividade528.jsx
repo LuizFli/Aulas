@@ -25,10 +25,6 @@ function Atividade528() {
                 idadeVice:  Number(prompt('Qual a Idade do vice da '+n+'° chapa:'))
             }
 
-
-            // obj.idade = presi
-            // obj.idadeVice = vice
-
             array.push(obj)
 
             cont--
