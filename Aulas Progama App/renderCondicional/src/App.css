@@ -46,6 +46,8 @@
   border-radius: 10px;
   padding: 15px;
   margin: 40px;
+  height: 300px;
+  align-items: end;
 }
 .div-app-container:hover{
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.445);
