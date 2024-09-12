@@ -31,7 +31,7 @@ function App() {
         
         let count = 0
         const maxCount = 15
-        const delay = 500
+        const delay = 1000
         const intervalId = setInterval(() => {
           
           if(count%2 == 0){
