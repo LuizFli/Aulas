@@ -1,0 +1,11 @@
+.div-container-juca{
+    color: greenyellow;
+    display: flex;
+    box-shadow: 0 0 10px  greenyellow;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

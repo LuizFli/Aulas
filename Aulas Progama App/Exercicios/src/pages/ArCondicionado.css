@@ -1,0 +1,32 @@
+.div-container-arcond{
+    color: greenyellow;
+    display: flex;
+    box-shadow: 0 0 10px  greenyellow;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    
+}
+.divC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+
+}
+.divF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    gap: 15px;
+    
+}
