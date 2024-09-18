@@ -1,0 +1,22 @@
+.div-530-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: grey;
+    
+}
+.div-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    
+
+}
+.test{
+    background-color: green;
+}
+.testRed{
+    background-color: red;
+}

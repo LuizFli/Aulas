@@ -1,8 +1,7 @@
-/*5.30 - Dois copos meio cheios: Faça um programa para ler um número e imprimir uma mensagem dizendo se o mesmo é par e positivo ao mesmo tempo.*/ 
-import'./Atividade530.css'
 import React, { useState } from 'react'
+import './DoisCopos.css'
 
-function Atividade530() {
+function DoisCopos() {
     const [inputNumero, setInputNumero] = useState()
     const [resultado, setResultado] = useState() 
     const [cor, setColor] = useState()
@@ -15,7 +14,7 @@ function Atividade530() {
             case ((e.target.value)%2 == 0 && Number(e.target.value)>0):
                 
                 setResultado('É Pár e Positivo')
-                setColor('green')
+                setColor('greenyellow')
                 setClasse('test')
 
                 break;
@@ -29,40 +28,42 @@ function Atividade530() {
                 
                 setResultado('É Positivo')
                 setColor('brown')
+                setClasse('testRed')
                 break;
             case ((e.target.value)%2 != 0 && Number(e.target.value)>0):
                 
                 setResultado('Não é Par Mas é positivo')
                 setColor('brown')
+                setClasse('testRed')
                     break;
             case ((e.target.value)%2 == 0 && Number(e.target.value)<0):
                 
                 setResultado('É Par Mas Não é positivo')
                 setColor('brown')
+                setClasse('testRed')
                     break;
             case ((e.target.value)%2 != 0 && Number(e.target.value)<0):
                 
                 setResultado('Não é Par Nem é positivo')
                 setColor('brown')
+                setClasse('testRed')
                     break;
             default:
                 setResultado('Error')
                 setColor('brown')
+                setClasse('testRed')
                 break;
         }
-        // setClasse('test')
     }
-
   return (
-    // <div className='div-530-container'>
     <div className={stateClasse}>
-        
+        <div>
 
-        <label htmlFor="inpR"></label>
-        
+      <label >Digite Um Numero :</label>
+        </div>
         <div className='div-input' style={{color: cor}}>
 
-      <input type="text" placeholder='Digite Um Numero' value={inputNumero} onChange={ler} id='inpR'/>
+      <input type="text" placeholder='Digite Um Numero' value={inputNumero} onChange={ler}/>
       {resultado}
         </div>
 
@@ -70,4 +71,4 @@ function Atividade530() {
   )
 }
 
-export default Atividade530
+export default DoisCopos

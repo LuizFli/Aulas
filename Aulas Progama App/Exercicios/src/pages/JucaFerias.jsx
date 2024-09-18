@@ -1,13 +1,51 @@
 import React, { useState } from 'react'
 import './JucaFerias.css'
+import Orcamento from '../components/Orcamento'
 
 function JucaFerias() {
 const [diarias, setDiarias] = useState()
+const [components, setComponents] = useState(false)
+const [valorTotal, setValorTotal] = useState()
+const [valorDiarias, setValorDiarias] = useState()
+const [valorInicial, setValorInicial] = useState()
+const [desconto , setDesconto] = useState(10)
+const [desconto2, setDesconto2] = useState(15)
+const [multa, setMulta] = useState(150.00)
+
 
 
 function verificaValor(){
-    
-    
+    let valorDiaria = 0
+    let valorTotal = 0
+    let valorDiariaInicial = 0
+    let QntDiarias = Number(diarias) 
+
+    if(QntDiarias <= 5){
+
+        valorDiaria = 100
+        
+        
+    }else if(QntDiarias <= 10){
+
+        valorDiaria = 90
+        
+    }else if(QntDiarias > 10){
+
+      valorDiaria = 80
+
+    }else{
+      setDiarias(0)
+    }
+       
+
+        
+    valorDiariaInicial = QntDiarias*valorDiaria
+    valorTotal = (((((valorDiariaInicial) * 90)/100)*85)/100) + 150
+
+    setValorInicial(valorDiariaInicial.toFixed(2))
+    setValorDiarias(valorDiaria.toFixed(2))
+    setValorTotal(valorTotal.toFixed(2))
+    setComponents(true)
 }
 
 
@@ -47,7 +85,9 @@ pagamentos, descontos...);
       value={diarias}
       onChange={(e) => setDiarias(e.target.value)}
       />
-      <button onClick={verificaValor}>Verificar Valor</button>
+      <button onClick={verificaValor} >Verificar Valor</button>
+      {components && <Orcamento ValorDiarias = {valorInicial} TotalDiarias = {diarias} ValorDaDiaria = {valorDiarias} Desconto = {desconto} Desconto2 = {desconto2} multa = {multa} ValorTotal = {valorTotal} />}
+      
     </div>
   )
 }

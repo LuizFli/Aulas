@@ -1,0 +1,21 @@
+.div-pesquisa{
+    gap: 20px;
+}
+.formInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 20px;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.butao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
