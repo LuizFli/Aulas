@@ -19,32 +19,67 @@ function PesquisaHabitantes() {
 
     function enviarDado() {
 
-
+        
         let obj = {
-            
+
             altura: altura,
-            genero: inpGenero,
+            genero: inpGenero
 
         }
 
-        setDados([...dados , obj])
-        
+        setDados([...dados, obj])
+
 
     }
     function verificarDados() {
 
+        let somatorioMasc = 0
+        let somatorioFem = 0
+        let contFem = 0
+        let contMasc = 0
 
 
+        for (let i = 0; i < dados.length; i++) {
+            let elemt = dados[i].altura;
+            let util = dados[i].genero
 
-        // let obj = {
-        //     maiorAltura :,
+            if(util == 0){
 
+                Number(somatorioMasc += elemt)
 
+                contMasc++
+            }
+            if(util == 1){
 
+                Number(somatorioFem += elemt)
 
-        //     }
-        
-        // setResultado(obj)
+                contFem++
+
+            }
+
+            if(elemt > maiorAltura){
+
+                setMaiorAltura(elemt)
+
+            }
+            if(elemt < menorAltura || menorAltura == null){
+
+                setMenorAltura(elemt)
+
+            }
+            
+        }
+
+        let  mediaMascu = somatorioMasc / contMasc
+
+        let  mediaFemea = somatorioFem / contFem
+
+        let  mediaGeral = (somatorioMasc + somatorioFem ) / (contFem+ contMasc)
+
+        setMediaFem(mediaFemea)
+        setMediaMasc(mediaMascu)
+        setMediaAltura(mediaGeral)
+
         setComponents(true)
     }
 
@@ -55,7 +90,7 @@ function PesquisaHabitantes() {
                 um programa que leia os dados de 10 pessoas e informe:
                  a maior e a menor altura encontrada;
                  a média de altura das mulheres;
-                  a média de altura dos homens;
+                a média de altura dos homens;
                  a média de altura da população;
                 o percentual de mulheres na população
                  o percentual de homens na população.</p>
@@ -81,7 +116,7 @@ function PesquisaHabitantes() {
                 <button onClick={enviarDado}>Enviar Dado</button>
                 <button onClick={verificarDados}>Verificar Dados</button>
             </div>
-            {components && <Pesquisa MaiorAltura = {maiorAltura} MenorAltura = {menorAltura}  AlturaMulheres = {mediaFem} AlturaHomens = {mediaMasc} MediaAltura = {mediaAltura} PerHomens = {perMasc} PerMulheres = {perFem} />}
+            {components && <Pesquisa MaiorAltura={maiorAltura} MenorAltura={menorAltura} AlturaMulheres={mediaFem} AlturaHomens={mediaMasc} MediaAltura={mediaAltura} PerHomens={perMasc} PerMulheres={perFem} />}
 
         </div>
     )
