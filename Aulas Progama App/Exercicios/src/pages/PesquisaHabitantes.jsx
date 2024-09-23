@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './PesquisaHabitantes.css'
 import Pesquisa from '../components/Pesquisa'
 
 function PesquisaHabitantes() {
     const [components, setComponents] = useState(false)
     const [dados, setDados] = useState([])
-    const [inpGenero, setInpGenero] = useState()
-    const [altura, setAltura] = useState()
+    const [inpGenero, setInpGenero] = useState('')
+    const [altura, setAltura] = useState('')
     const [maiorAltura, setMaiorAltura] = useState(0)
     const [menorAltura, setMenorAltura] = useState(100)
     const [mediaFem, setMediaFem] = useState(0)
@@ -15,10 +15,16 @@ function PesquisaHabitantes() {
     const [perMasc, setPerMasc] = useState(0)
     const [perFem, setPerFem] = useState(0)
 
+    useEffect(() => {
+        console.log(dados);
+        console.log("Menor: ", menorAltura);
+        console.log("Maior: ", maiorAltura);
+    }, [dados, menorAltura, maiorAltura])
+
 
     function enviarDado() {
 
-        
+
         let obj = {
 
             altura: Number(altura),
@@ -30,6 +36,8 @@ function PesquisaHabitantes() {
         setInpGenero('')
         setAltura('')
 
+        // verificarDados()
+
 
     }
     function verificarDados() {
@@ -38,20 +46,20 @@ function PesquisaHabitantes() {
         let somatorioFem = 0
         let contFem = 0
         let contMasc = 0
-        
+
 
 
         for (let i = 0; i < dados.length; i++) {
             let alt = dados[i].altura;
             let gen = dados[i].genero
 
-            if(gen == 0){
+            if (gen == 0) {
 
                 somatorioMasc += alt
 
                 contMasc++
             }
-            if(gen == 1){
+            if (gen == 1) {
 
                 somatorioFem += alt
 
@@ -59,30 +67,30 @@ function PesquisaHabitantes() {
 
             }
 
-            if(alt > maiorAltura || maiorAltura == null){
+            if (alt > maiorAltura){// || maiorAltura == null) {
 
                 setMaiorAltura(alt)
 
             }
-            if(alt < menorAltura || menorAltura == null){
+            if (alt < menorAltura){// || menorAltura == null) {
 
                 setMenorAltura(alt)
 
             }
-            
+
         }
 
-        let  mediaMascu = somatorioMasc / contMasc
+        let mediaMascu = somatorioMasc / contMasc
 
-        let  mediaFemea = somatorioFem / contFem
+        let mediaFemea = somatorioFem / contFem
 
-        let  mediaGeral = (somatorioMasc + somatorioFem ) / (contFem+ contMasc)
+        let mediaGeral = (somatorioMasc + somatorioFem) / (contFem + contMasc)
 
-        let  contTotal =  contFem + contMasc
+        let contTotal = contFem + contMasc
 
-        let  PercentualM = (contMasc / contTotal) *100
+        let PercentualM = (contMasc / contTotal) * 100
 
-        let  percentualF = (contFem / contTotal) *100
+        let percentualF = (contFem / contTotal) * 100
 
         setMediaFem(mediaFemea)
         setMediaMasc(mediaMascu)
@@ -127,6 +135,8 @@ function PesquisaHabitantes() {
                 <button onClick={verificarDados}>Verificar Dados</button>
             </div>
             {components && <Pesquisa MaiorAltura={maiorAltura} MenorAltura={menorAltura} AlturaMulheres={mediaFem} AlturaHomens={mediaMasc} MediaAltura={mediaAltura} PerHomens={perMasc} PerMulheres={perFem} />}
+
+            {menorAltura}
 
         </div>
     )

@@ -4,7 +4,7 @@ function Pesquisa(props) {
     return (
         <div>
 
-            <p>
+           
                 DADOS DA PESQUISA
                 <p>A maior  altura encontrada : {props.MaiorAltura} </p>
                 <p>A menor altura encontrada :  {props.MenorAltura}</p>
@@ -13,7 +13,7 @@ function Pesquisa(props) {
                 <p>A média de altura da população : {props.MediaAltura} </p>
                 <p>O percentual de Homens na população : {props.PerHomens} % </p>
                 <p>O percentual de Mulheres na população :  {props.PerMulheres} % </p>
-            </p>
+            
 
         </div>
     )
