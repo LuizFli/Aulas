@@ -7,9 +7,8 @@ function PesquisaHabitantes() {
     const [dados, setDados] = useState([])
     const [inpGenero, setInpGenero] = useState()
     const [altura, setAltura] = useState()
-    const [resultado, setResultado] = useState()
     const [maiorAltura, setMaiorAltura] = useState(0)
-    const [menorAltura, setMenorAltura] = useState(0)
+    const [menorAltura, setMenorAltura] = useState(100)
     const [mediaFem, setMediaFem] = useState(0)
     const [mediaMasc, setMediaMasc] = useState(0)
     const [mediaAltura, setMediaAltura] = useState(0)
@@ -22,12 +21,14 @@ function PesquisaHabitantes() {
         
         let obj = {
 
-            altura: altura,
-            genero: inpGenero
+            altura: Number(altura),
+            genero: Number(inpGenero)
 
         }
 
         setDados([...dados, obj])
+        setInpGenero('')
+        setAltura('')
 
 
     }
@@ -37,34 +38,35 @@ function PesquisaHabitantes() {
         let somatorioFem = 0
         let contFem = 0
         let contMasc = 0
+        
 
 
         for (let i = 0; i < dados.length; i++) {
-            let elemt = dados[i].altura;
-            let util = dados[i].genero
+            let alt = dados[i].altura;
+            let gen = dados[i].genero
 
-            if(util == 0){
+            if(gen == 0){
 
-                Number(somatorioMasc += elemt)
+                somatorioMasc += alt
 
                 contMasc++
             }
-            if(util == 1){
+            if(gen == 1){
 
-                Number(somatorioFem += elemt)
+                somatorioFem += alt
 
                 contFem++
 
             }
 
-            if(elemt > maiorAltura){
+            if(alt > maiorAltura || maiorAltura == null){
 
-                setMaiorAltura(elemt)
+                setMaiorAltura(alt)
 
             }
-            if(elemt < menorAltura || menorAltura == null){
+            if(alt < menorAltura || menorAltura == null){
 
-                setMenorAltura(elemt)
+                setMenorAltura(alt)
 
             }
             
@@ -76,9 +78,17 @@ function PesquisaHabitantes() {
 
         let  mediaGeral = (somatorioMasc + somatorioFem ) / (contFem+ contMasc)
 
+        let  contTotal =  contFem + contMasc
+
+        let  PercentualM = (contMasc / contTotal) *100
+
+        let  percentualF = (contFem / contTotal) *100
+
         setMediaFem(mediaFemea)
         setMediaMasc(mediaMascu)
         setMediaAltura(mediaGeral)
+        setPerFem(percentualF)
+        setPerMasc(PercentualM)
 
         setComponents(true)
     }
