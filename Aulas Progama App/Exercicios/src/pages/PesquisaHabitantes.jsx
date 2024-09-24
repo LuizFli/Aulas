@@ -7,8 +7,8 @@ function PesquisaHabitantes() {
     const [dados, setDados] = useState([])
     const [inpGenero, setInpGenero] = useState('')
     const [altura, setAltura] = useState('')
-    const [maiorAltura, setMaiorAltura] = useState(0)
-    const [menorAltura, setMenorAltura] = useState(100)
+    const [maiorAltura, setMaiorAltura] = useState()
+    const [menorAltura, setMenorAltura] = useState()
     const [mediaFem, setMediaFem] = useState(0)
     const [mediaMasc, setMediaMasc] = useState(0)
     const [mediaAltura, setMediaAltura] = useState(0)
@@ -24,17 +24,19 @@ function PesquisaHabitantes() {
 
     function enviarDado() {
 
+        if(altura != null && inpGenero != null){
 
-        let obj = {
-
-            altura: Number(altura),
-            genero: Number(inpGenero)
-
+            let obj = {
+                
+                altura: Number(altura),
+                genero: Number(inpGenero)
+                
+            }
+            
+            setDados([...dados, obj])
         }
-
-        setDados([...dados, obj])
-        setInpGenero('')
-        setAltura('')
+            setInpGenero('')
+            setAltura('')
 
         // verificarDados()
 
@@ -67,12 +69,12 @@ function PesquisaHabitantes() {
 
             }
 
-            if (alt > maiorAltura){// || maiorAltura == null) {
+            if (alt > maiorAltura || maiorAltura == null) {
 
                 setMaiorAltura(alt)
 
             }
-            if (alt < menorAltura){// || menorAltura == null) {
+            if (alt < menorAltura || menorAltura == null) {
 
                 setMenorAltura(alt)
 
@@ -134,7 +136,7 @@ function PesquisaHabitantes() {
                 <button onClick={enviarDado}>Enviar Dado</button>
                 <button onClick={verificarDados}>Verificar Dados</button>
             </div>
-            {components && <Pesquisa MaiorAltura={maiorAltura} MenorAltura={menorAltura} AlturaMulheres={mediaFem} AlturaHomens={mediaMasc} MediaAltura={mediaAltura} PerHomens={perMasc} PerMulheres={perFem} />}
+            {components && <Pesquisa MaiorAltura={maiorAltura.toFixed(2)} MenorAltura={menorAltura.toFixed(2)} AlturaMulheres={mediaFem.toFixed(2)} AlturaHomens={mediaMasc.toFixed(2)} MediaAltura={mediaAltura.toFixed(2)} PerHomens={perMasc.toFixed(2)} PerMulheres={perFem.toFixed(2)} />}
 
             {menorAltura}
 
