@@ -8,6 +8,7 @@ import Democracia from './pages/Democracia'
 import CopoMeioCheio from './pages/CopoMeioCheio'
 import DoisCopos from './pages/DoisCopos'
 import PesquisaHabitantes from './pages/PesquisaHabitantes'
+import Garcon from './pages/Garcon'
 
 function App() {
   const [pagina, setPagina] = useState()
@@ -27,7 +28,7 @@ function App() {
           <button onClick={() => setPagina(<Democracia />)}>5.28</button>
           <button onClick={() => setPagina( <CopoMeioCheio /> )}>5.29</button>
           <button onClick={() => setPagina(<DoisCopos />)}>5.30</button>
-          <button onClick={() => setPagina()}>5.31</button>
+          <button onClick={() => setPagina(<Garcon />)}>5.31</button>
           <button onClick={() => setPagina(<JucaFerias />)}>5.7</button>
           <button onClick={() => setPagina(<PesquisaHabitantes/>)}>7.10</button>
         </nav>

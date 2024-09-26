@@ -1,0 +1,11 @@
+.div-forms-input{
+    box-shadow: 0 0 10px greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.div-but{
+    padding: 20px;
+}

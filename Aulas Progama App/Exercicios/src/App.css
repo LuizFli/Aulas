@@ -42,10 +42,18 @@ html,body,#root {
   color: greenyellow;
 }
 button{
-  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  border-radius: 10px;
   background-color: greenyellow;
   color: black;
   cursor: pointer;
+  
+  
+}
+button:hover{
+  transition: 1.2s;
+  box-shadow: inset 0 0 10px 3px wheat;
 }
 nav{
   display: flex;
