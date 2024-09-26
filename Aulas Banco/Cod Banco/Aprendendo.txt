@@ -1,0 +1,39 @@
+
+-- create
+CREATE TABLE Cliente (
+  cliente_id INTEGER PRIMARY KEY,
+  cliente_name VARCHAR(50),
+  cliente_email VARCHAR(50)
+);
+CREATE TABLE Pedido (
+  pedido_id INTEGER PRIMARY KEY,
+  cliente_id INTEGER REFERENCES Cliente(cliente_id),
+  pedido_date DATE
+);
+
+
+-- insert
+
+INSERT INTO Cliente VALUES (0001, 'Clark', 'clark@gmail.com');
+INSERT INTO Cliente VALUES (0002, 'Dave', 'dave@gmail.com');
+INSERT INTO Cliente VALUES (0003, 'Ava', 'ava@gmail.com');
+INSERT INTO Cliente VALUES (0004, 'Mia', 'mia@gmail.com');
+INSERT INTO Cliente VALUES (0005, 'Liam', 'liam@gmail.com');
+INSERT INTO Cliente VALUES (0006, 'Noah', 'noah@gmail.com');
+INSERT INTO Cliente VALUES (0007, 'Olivia', 'olivia@gmail.com');
+INSERT INTO Cliente VALUES (0008, 'Emma', 'emma@gmail.com');
+INSERT INTO Cliente VALUES (0009, 'Sophia', 'sophia@gmail.com');
+INSERT INTO Cliente VALUES (0010, 'Jackson', 'jackson@gmail.com');
+
+--insert
+
+INSERT INTO Pedido VALUES (01, 0003, '2024-10-24');
+INSERT INTO Pedido VALUES (02, 0004, '2024-10-25');
+INSERT INTO Pedido VALUES (03, 0005, '2024-10-26');
+INSERT INTO Pedido VALUES (04, 0006, '2024-10-27');
+INSERT INTO Pedido VALUES (05, 0007, '2024-10-28');
+
+-- fetch 
+
+SELECT * FROM Cliente;
+SELECT * FROM Pedido;
