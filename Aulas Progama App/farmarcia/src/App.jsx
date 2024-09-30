@@ -10,7 +10,7 @@ function App() {
   const [filaPref, setFilaPref] = useState([])
   const [senhaAtendida, setSenhaAtendida] = useState([])
   const [proximo, setProximo] = useState(1)
-  const [proximoPref, setProximoPref] = useState(1)
+  const [proximoPref, setProximoPref] = useState(500)
   function gerarSenhaPref() {
 
     let senha = {
@@ -118,35 +118,44 @@ function App() {
             <h2>Senhas Na Fila</h2>
           </div>
 
-            <div className="form-fila-senha">
-              <div>
-                <div className="div-tipo-fila">
-                  <h3>Fila Preferencial</h3>
-                </div>
-                          <div className='div-senhas'>
+          <div className="form-fila-senha">
+
+            <div className='div-h2-map'>
+
+              <div className="div-tipo-fila">
+                <h3>Fila Preferencial</h3>
+              </div>
+
+              <div className='div-senhas'>
                 {filaPref.map((senha) => (
                   <div key={senha.numero}>
                     <p> {senha.numero}</p>
                     <p> {senha.tipo}</p>
                   </div>
+
                 ))}
-                </div>
+
               </div>
-              <div>
-                <div className='div-tipo-fila'>
+
+            </div>
+
+            <div className='div-h2-map'>
+
+              <div className='div-tipo-fila'>
                 <h3>Fila Normal</h3>
-                </div>
-                           <div className="div-senhas">
-                
-                 {fila.map((senha) => (
-                   <div key={senha.numero}>
-                     <p> {senha.numero}</p>
-                     <p> {senha.tipo}</p>
-                   </div>
-                 ))}
-                           </div>
+              </div>
+
+              <div className="div-senhas">
+
+                {fila.map((senha) => (
+                  <div key={senha.numero}>
+                    <p> {senha.numero}</p>
+                    <p> {senha.tipo}</p>
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
 
         </div>
       </div>
