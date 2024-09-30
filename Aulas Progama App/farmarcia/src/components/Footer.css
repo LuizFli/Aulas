@@ -1,0 +1,37 @@
+.Footer-container{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: line;
+    background-color: var(--cor-6);
+ 
+ }
+ .lblContato{
+    
+ 
+     font-size: 45px;
+     color: var(--cor-2);
+     font-family: Arial, Helvetica, sans-serif;
+   
+ 
+ }
+ .imgCartoesFooter{
+ 
+    border-radius: 15px;
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 15px;
+ 
+ }
+ .lblInfoContato{
+ 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-2);
+    
+ 
+ }
