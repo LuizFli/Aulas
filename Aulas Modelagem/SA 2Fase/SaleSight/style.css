@@ -53,6 +53,28 @@ html,body {
     font-size: 45px;
     
 }
+#but-contato{
+
+    border-radius: 20px;
+    background-color: #918EF3;
+    font-weight: bold;
+    height: 50%;
+    width: 30%;
+
+}
+#but-contato:hover{
+
+    transition: 1s;
+    box-shadow: inset 0 0 10px 3px whitesmoke;
+}
+#but-contato:active{
+
+    transition: 0s;
+    background-color: whitesmoke;
+    color: #918EF3;
+    font-weight: bold;
+
+}
 .but-D{
     
     color: rgba(0, 0, 0, 0.658);
@@ -84,71 +106,14 @@ button {
 
 
 .meio-container{
-    width: 100%;
+    width: 50%;
     height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-    .infos{
-        width: 80%;
-        height: 60%;
-        background-color: rgb(238, 230, 230);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: 0;
-        border-radius: 20px;
-        box-shadow: 10 0 80 black;
-    }
-
-        .input-pesquisa-aviao{
-            width: 400px;
-            height: 60%;
-            border: 0 solid;
-            border-radius: 10px;
-            padding-left:10px;
-        }
-        .input-select-date{
-            height: 60%;
-            width: 120px;
-            border: 0;
-            border-radius: 10px;
-            padding-left:10px;
-        }
-        .input-select-hours{
-            height: 60%;
-            border-radius: 10px;
-            width: 120px;
-            border: 0;
-            border-radius: 10px;
-            border-radius: 10px;
-            padding-left:10px;
-        }
-        .select-people{
-            height: 60%;
-            width: 130px;
-            border: 0;
-            border-radius: 10px;
-            padding-left:10px;
-        }
-        .pagamento{
-            font-size: 20px;
-            padding: 10px;
-            width: 130px;
-            text-align: center;
-            background-color: #918EF3;
-            border-radius: 20px;
-            cursor: pointer;
-            color: white;
-        }
-        .pagamento:hover{
-
-            box-shadow: inset 0 0 10px 3px whitesmoke;
-            transition: 1.2s;
-        }
-
     
+}
+   
 
 .section-container{
     display: flex;
@@ -190,7 +155,7 @@ button {
     }
     
     .section-lbl{
-        font-size: 50px;
+        font-size: 80px;
     }
     
     .section-bttn-container{
@@ -203,17 +168,24 @@ button {
         background-color: #11073E;
     }
     .section-bttn{
+        font-size: 200%;
         background-color: #fda310;
-        width: 150px;
-        height: 50px;
+        width: 300px;
+        height: 100px;
         color: black;
-        border-radius: 20px;
+        border-radius: 50px;
         font-weight: bold;
     }
     .section-bttn:hover{
     
         transition: 1.2s;
-        box-shadow: inset 0 0 10px 3px #918EF3;
+        box-shadow: inset 0 0 50px 20px #918EF3;
+    }
+    .section-bttn:active{
+    
+        transition: 0s;
+        color: #fda310;
+        background-color: #11073E;
     }
     
     .section-direita {
