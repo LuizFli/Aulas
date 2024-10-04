@@ -48,6 +48,8 @@ function PesquisaHabitantes() {
         let somatorioFem = 0
         let contFem = 0
         let contMasc = 0
+        let menorAlt = 100
+        let maiorAlt = 0
 
 
 
@@ -71,35 +73,37 @@ function PesquisaHabitantes() {
 
             if (alt > maiorAltura || maiorAltura == null) {
 
-                setMaiorAltura(alt)
-
+                maiorAlt = alt
+                
             }
             if (alt < menorAltura || menorAltura == null) {
-
-                setMenorAltura(alt)
-
+                
+                menorAlt = alt
+                
             }
-
+            
         }
-
+        
         let mediaMascu = somatorioMasc / contMasc
-
+        
         let mediaFemea = somatorioFem / contFem
-
+        
         let mediaGeral = (somatorioMasc + somatorioFem) / (contFem + contMasc)
-
+        
         let contTotal = contFem + contMasc
-
+        
         let PercentualM = (contMasc / contTotal) * 100
-
+        
         let percentualF = (contFem / contTotal) * 100
-
+        
         setMediaFem(mediaFemea)
         setMediaMasc(mediaMascu)
         setMediaAltura(mediaGeral)
         setPerFem(percentualF)
         setPerMasc(PercentualM)
-
+        setMaiorAltura(maiorAlt)
+        setMenorAltura(menorAlt)
+        
         setComponents(true)
     }
 
