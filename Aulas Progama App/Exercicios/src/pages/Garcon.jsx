@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Garcon.css'
-import ResultadoNegativo from '../components/ResultadoNegativo'
 import ResultadoPositivo from '../components/ResultadoPositivo'
 
 function Garcon() {
