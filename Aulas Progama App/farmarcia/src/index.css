@@ -16,6 +16,6 @@ html,body,#root{
   min-height: 100hz;
   max-height: 100hz;
   max-width: 100hz  ;
-  background-color: #e6e6e6;
+  background-color: var(--cor-5);
 
 }

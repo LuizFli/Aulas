@@ -1,5 +1,7 @@
 import React from 'react'
 import './Body.css'
+import Fila from './Fila'
+import Produtos from './Produtos'
 
 function Body() {
     return (
@@ -50,11 +52,17 @@ function Body() {
                 <label className='body-label-venda'>Produtos a Venda</label>
 
             </div>
-            <div className='body-camiseta'>
+            <div className='body-produtos'>
 
-                <img className='camiseta' src="/public/image/farmarcia-camiseta.png" alt="" />
-                <img className='camiseta' src="/public/image/farmarcia-camisetas.png" alt="" />
+                <Produtos/>
+
             </div>
+            <div className='body-fila'>
+
+            <Fila/>
+
+            </div>
+
             
 
         </div>

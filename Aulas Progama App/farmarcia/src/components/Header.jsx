@@ -1,12 +1,14 @@
 import React from 'react'
 import './Header.css'
+import Logo from './Logo'
 
 function Header() {
   return (
     <div className='header-container'>
         <div className='header-icon'>
 
-      <img className='header-logo' src="./public/image/farmarcia-logo-pq.png" alt="" />
+          <Logo/>
+
         </div>
 
       <div className='header-label'>

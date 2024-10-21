@@ -1,0 +1,37 @@
+:root{
+  --cor-1: #e23e57;
+  --cor-2: #ffffff;
+  --cor-3: #e96a7e;
+  --cor-4: #ce1f3a;
+  --cor-5: #e6e6e6;
+  --cor-6: #ef97a4;
+}
+.div-senhas{
+
+
+    min-height: 0px;
+    width: 200px;
+
+    background-color: var(--cor-5);
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+    font-weight: bolder;
+    color: var(--cor-4);
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px;
+  }
+  .form-fila-senha{
+    
+    display: flex;
+    flex-direction: row;
+  }
+  .fila-container{
+
+    color: var(--cor-5);
+    
+  }

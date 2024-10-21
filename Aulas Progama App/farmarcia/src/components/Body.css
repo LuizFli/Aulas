@@ -1,3 +1,11 @@
+:root{
+    --cor-1: #e23e57;
+    --cor-2: #ffffff;
+    --cor-3: #e96a7e;
+    --cor-4: #ce1f3a;
+    --cor-5: #e6e6e6;
+    --cor-6: #ef97a4;
+  }
 .body-container{
     height: 100%;
     width: 100%;
@@ -26,6 +34,7 @@
     justify-content: center;
 }
 .div-body-label{
+    color: var(--cor-2);
     width: 60%;
 
 }
@@ -36,7 +45,7 @@
     text-align: center;
     margin-top: 20px;
 }
-.body-camiseta{
+.body-produtos{
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -50,10 +59,11 @@
 
 }
 .body-label-venda{
-    color: #e6e6e6;
+    color: var(--cor-5);
     font-size: 50px;
 }
 .body-sobreNos{
+    
     width: 100%;
     height: 10%;
     display: flex;
@@ -61,16 +71,17 @@
     align-items: center;
 }
 .body-label-sobreNos{
-    color: #e6e6e6;
+    color: var(--cor-5);
     font-size: 50px;
 }
 .labelNHistoria{
-    color: #e6e6e6;
+    color: var(--cor-5);
     font-size: 50px;
     
 }
 .div-body-historia{
 
+    color: var(--cor-2);
     width: 100%;
     display: flex;
     justify-content: center;

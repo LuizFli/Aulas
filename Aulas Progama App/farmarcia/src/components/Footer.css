@@ -1,11 +1,28 @@
+:root{
+   --cor-1: #e23e57;
+   --cor-2: #ffffff;
+   --cor-3: #e96a7e;
+   --cor-4: #ce1f3a;
+   --cor-5: #e6e6e6;
+   --cor-6: #ef97a4;
+ }
 .Footer-container{
 
     height: 100%;
     display: flex;
     align-items: center;
-    flex-direction: line;
+    flex-direction: column;
     background-color: var(--cor-6);
  
+ }
+ .div-contato{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   margin: 20px;
+
  }
  .lblContato{
     
@@ -13,13 +30,14 @@
      font-size: 45px;
      color: var(--cor-2);
      font-family: Arial, Helvetica, sans-serif;
+    
    
  
  }
  .imgCartoesFooter{
  
     border-radius: 15px;
-    height: 100px;
+    height: 300px;
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 15px;
@@ -34,4 +52,21 @@
     color: var(--cor-2);
     
  
+ }
+ .but-discord{
+   
+   color: var(--cor-4) ;
+   background-color: var(--cor-5);
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+ .icon-D{
+   height: 20px;
+   padding-right: 10px;
+ }
+ a{
+  text-decoration: none;
  }

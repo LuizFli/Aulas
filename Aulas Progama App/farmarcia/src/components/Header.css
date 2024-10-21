@@ -1,9 +1,17 @@
+:root{
+    --cor-1: #e23e57;
+    --cor-2: #ffffff;
+    --cor-3: #e96a7e;
+    --cor-4: #ce1f3a;
+    --cor-5: #e6e6e6;
+    --cor-6: #ef97a4;
+  }
 @font-face {
     font-family: 'Bonello';
     src: url(/public/fonts/Bonello-Regular.otf);
 }
 .header-container{
-    background-color: #e23e57;
+    background-color: var(--cor-1);
     display: flex;
     height: 100%;
 }
@@ -25,7 +33,7 @@
 .header-farm-label{
     font-family: 'Bonello' ;
     font-size: 80px;
-    color: #ffffff;
+    color:var(--cor-2) ;
 }
 .header-logo{
     height: 120px;
