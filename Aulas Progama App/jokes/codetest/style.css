@@ -1,0 +1,49 @@
+body,html{
+    background-color: rgb(255, 13, 13);
+    height: 99%;
+}
+.pai{
+    background-color: rgb(22, 22, 73);
+    height: 100%;
+    width: 100%;
+}
+.topo{
+width: 100%;
+height: 50%;
+display: flex;
+
+}
+    .topoesquerda{
+        background-color: rgb(51, 158, 219);
+        width: 50%;
+        height: 100%;
+    }
+
+    .topodireita{
+        background-color: rgb(255, 185, 0);
+        width: 50%;
+        height: 100%;
+    }
+
+.baixo{
+width: 100%;
+height: 50%;
+display: flex;
+}
+
+.baixoesquerda{
+    background-color: rgb(187, 64, 64);
+    width: 50%;
+    height: 100%;
+}
+.baixodireita{
+    background-color: rgb(152, 152, 189);
+    width: 50%;
+    height: 100%;
+}
+
+.child{
+    background-color: rgb(60, 94, 26);
+    width: 10%;
+    height: 20%;
+}
