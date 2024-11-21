@@ -20,3 +20,7 @@ app.listen(3000, () => {
     console.log('Server Rodando na porta 3000');
 
 });
+
+// npm install axios    FRONT-END
+// npm install express --save    BACK-END
+// npm install --save-dev nodemon      BACK-END
